@@ -1,13 +1,30 @@
 import { connect } from 'react-redux';
 
+import { increment, decrement } from '../../state/actions';
+
 import ConnectedComponent from './component';
 
 const mapStateToProps = (state) => {
-  return {};
+  const {
+    counter: {
+      counter,
+    },
+  } = state;
+
+  return {
+    counter,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    increment: () => {
+      dispatch(increment());
+    },
+    decrement: () => {
+      dispatch(decrement());
+    },
+  };
 };
 
 export default connect(
