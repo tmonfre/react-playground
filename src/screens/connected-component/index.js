@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ClassComponent from './component';
+import ConnectedComponent from './component';
 
 const mapStateToProps = (state) => {
   return {};
@@ -13,4 +13,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ClassComponent);
+)(ConnectedComponent);

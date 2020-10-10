@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import {
   ClassComponent,
-  Functional,
+  ConnectedComponent,
+  FunctionalComponent,
 } from './screens';
 
 const FallBack = () => {
@@ -15,8 +16,9 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route path="/class" component={ClassComponent} />
-          <Route path="/functional" component={Functional} />
+          <Route path="/components/class" component={ClassComponent} />
+          <Route path="/components/functional" component={FunctionalComponent} />
+          <Route path="/components/connected" component={ConnectedComponent} />
           <Route component={FallBack} />
         </Switch>
       </div>
